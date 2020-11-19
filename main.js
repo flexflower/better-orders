@@ -14,7 +14,7 @@ var qrcode = new QRCode(document.getElementById('qrcode'), {
 });
 
 function generateQR() {
-    qrcode.makeCode(makeid(10))
+    qrcode.makeCode("https://flexflower.github.io/insn/" + makeid(15))
 }
 
 generateQR();
