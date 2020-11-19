@@ -1,6 +1,6 @@
 body {
     background: rgb(36,0,0);
-    background: linear-gradient(210deg, rgba(36,0,0,1) 0%, rgba(255,0,0,1) 100%);
+    background: linear-gradient(210deg, rgb(100, 0, 0) 0%, rgba(255,0,0,1) 100%);
 }
 
 #qrcode {
