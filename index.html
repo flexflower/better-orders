@@ -5,12 +5,15 @@
   </head>
 
   <body onclick="generateQR()">
-    <div
-      id="qrcode"
-      href="https://flexflower.github.io/insn/generated.html"
-    ></div>
+    <div id="qrall">
+      <div id="qrcode"></div>
+      <div id="qrtitle"><b>Please scan this QR code on your phone.</b></div>
+      <div id="reloadcount">Reload in</div>
+    </div>
   </body>
 
   <script src="./lib/qrcode.min.js"></script>
-  <script src="main.js"></script>
+  <script src="./javascript/makeqr.js"></script>
+  <script src="./javascript/relcountdown.js"></script>
+  <script src="./javascript/main.js"></script>
 </html>
