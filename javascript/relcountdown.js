@@ -1,11 +1,12 @@
-var time = 1 * 60,
-  r = document.getElementById("reloadcount"),
-  tmp = time;
+var time = 1 * 5;
+setInterval(generateQR, time * 1000);
+var r = document.getElementById("reloadcount");
+var tmp = time;
 
 setInterval(function () {
   var c = tmp--,
-    m = (c / 60) >> 0,
-    s = c - m * 60 + "";
-  r.textContent = "Reload in " + m + ":" + (s.length > 1 ? "" : "0") + s;
+    min = (c / 60) >> 0,
+    sec = c - min * 60 + "";
+  r.textContent = `Reload in  ${min}:${sec.length > 1 ? "" : "0"}${sec}`;
   tmp != 0 || (tmp = time);
 }, 1000);
