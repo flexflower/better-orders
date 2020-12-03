@@ -15,7 +15,8 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 });
 
 function generateQR() {
-  qrcode.makeCode(window.location.href + "/" + makeid(10));
+  currenturl = window.location.href;
+  qrcode.makeCode(currenturl + "/" + makeid(10));
 }
 
 generateQR();
