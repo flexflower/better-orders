@@ -1,7 +1,7 @@
 function makeid(length) {
   var result = "";
   var characters =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-";
   var charactersLength = characters.length;
   for (var i = 0; i < length; i++) {
     result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -15,7 +15,7 @@ var qrcode = new QRCode(document.getElementById("qrcode"), {
 });
 
 function generateQR() {
-  qrcode.makeCode("https://flexflower.github.io/insn/" + makeid(15));
+  qrcode.makeCode(window.location.href + "/" + makeid(10));
 }
 
 generateQR();
