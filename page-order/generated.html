@@ -8,7 +8,11 @@
       <div id="w_title"><b>Success!</b></div>
       <div id="w_text"><p>You can now take your order.</p></div>
     </div>
-    <div id="ip_text"><p>ip: </p></div>
+    <div id="i_infos"><p>ip: </p></div>
   </body>
-  <script src="/javascript/ip.js"></script>
+  <script>
+    fetch('https://api.ipify.org/?format=json')
+      .then(results => results.json())
+      .then(data => document.getElementById("i_infos").innerHTML = "ip: " + (data.ip))
+  </script>
 </html>
